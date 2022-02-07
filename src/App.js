@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Clone MOVIE PAGE
+          React Strart
         </a>
       </header>
     </div>
