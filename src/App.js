@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          React Strart
+          Movie Strart
         </a>
       </header>
     </div>
