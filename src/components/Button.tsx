@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import 'styles/btn.css'
 
 interface propsType {
@@ -5,13 +6,20 @@ interface propsType {
 }
 
 const Button = (props: propsType) => {
+  const [cnt, setCnt] = useState(0)
   const handleClick = () => {
-    console.log(1)
+    setCnt((prev) => prev + 1)
   }
+  useEffect(() => {
+    console.log(cnt)
+  }, [cnt])
   return (
-    <button onClick={handleClick} className={'btn'}>
-      {props.btnText}
-    </button>
+    <div>
+      <h1>{cnt}</h1>
+      <button onClick={handleClick} className={'btn'}>
+        {props.btnText}
+      </button>
+    </div>
   )
 }
 
