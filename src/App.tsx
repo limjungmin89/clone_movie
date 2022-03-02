@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './App.css'
 import Button from './components/Button'
 import Todos from './components/Todos'
 import ShowHide from './components/ShowHide'
+import CoinTracker from './components/CoinTracker'
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Button btnText="Click Me" />
       <ShowHide />
       <Todos />
+      <CoinTracker />
     </div>
   )
 }
