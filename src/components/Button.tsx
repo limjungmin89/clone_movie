@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import 'styles/btn.css'
 
 interface propsType {
@@ -14,13 +14,11 @@ const Button = (props: propsType) => {
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setKeyword(event.target.value)
   }
-  useEffect(() => {
-    console.log(keyword)
-  }, [keyword])
   return (
     <div>
+      <h1>keyword : {keyword}</h1>
       <input type="text" placeholder="Search here..." onChange={onChange} value={keyword}></input>
-      <h1>{cnt}</h1>
+      <h1>button click count : {cnt}</h1>
       <button onClick={onClick} className={'btn'}>
         {props.btnText}
       </button>
