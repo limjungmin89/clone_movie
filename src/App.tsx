@@ -4,6 +4,7 @@ import Button from './components/Button'
 import Todos from './components/Todos'
 import ShowHide from './components/ShowHide'
 import CoinTracker from './components/CoinTracker'
+import Movie from './components/Movie'
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <ShowHide />
       <Todos />
       <CoinTracker />
+      <Movie />
     </div>
   )
 }
