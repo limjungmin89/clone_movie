@@ -1,35 +1,20 @@
-import { useEffect, useState } from 'react'
+import movieInfo from '../model/type/movie'
 
-type movieInfo = {
-  id: string
-  title: string
+type movie = {
+  movie: movieInfo
 }
 
-const Movie = () => {
-  const [loading, setLoading] = useState(true)
-  const [movies, setMovies] = useState<Array<movieInfo>>([])
-  const getMovies = async () => {
-    const json = await (await fetch('https://yts.mx/api/v2/list_movies.json?minimun_rating=9&sort_by=year')).json()
-    console.log(json.data.movies)
-    setMovies(json.data.movies)
-    setLoading(false)
-    console.log(movies)
-  }
-  useEffect(() => {
-    getMovies()
-  }, [])
+const Movie = ({ movie }: movie) => {
   return (
-    <div>
-      <h1>The coins {movies.length}</h1>
-      {loading ? (
-        <h1>Loading...</h1>
-      ) : (
-        <ul>
-          {movies.map((item) => (
-            <li key={item.id}>{item.title}</li>
-          ))}
-        </ul>
-      )}
+    <div key={movie.id}>
+      <img src={movie.medium_cover_image} alt={movie.title} />
+      <h2>{movie.title}</h2>
+      <p>{movie.summary}</p>
+      <ul>
+        {movie.genres.map((genre) => (
+          <li key={genre}>{genre}</li>
+        ))}
+      </ul>
     </div>
   )
 }
