@@ -13,7 +13,6 @@ const MovieDetail = () => {
   }
   const getMovieDetail = async () => {
     const json = await (await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${param.id}`)).json()
-    console.log(json.data.movie)
     setMovieDetail(json.data.movie)
   }
   useEffect(() => {
