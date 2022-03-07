@@ -6,11 +6,11 @@ import MovieDetail from '../page/MovieDetail'
 
 const Router = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path={process.env.PUBLIC_URL + '/'} element={<Welcome />} />
-        <Route path={process.env.PUBLIC_URL + '/movies'} element={<Movies />} />
-        <Route path={process.env.PUBLIC_URL + '/movieDetail/:id'} element={<MovieDetail />} />
+        <Route path="/" element={<Welcome />} />
+        <Route path="/movies" element={<Movies />} />
+        <Route path="/movieDetail/:id" element={<MovieDetail />} />
       </Routes>
     </BrowserRouter>
   )
