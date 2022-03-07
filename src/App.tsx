@@ -1,11 +1,8 @@
 import './App.css'
+import Router from './routes/Router'
 
 const App = () => {
-  return (
-    <div>
-      <h1>Welcome</h1>
-    </div>
-  )
+  return <Router />
 }
 
 export default App
