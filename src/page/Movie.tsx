@@ -1,5 +1,5 @@
 import movieInfo from '../model/type/movie'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 type movie = {
   movie: movieInfo
@@ -13,7 +13,10 @@ const Movie = ({ movie }: movie) => {
   return (
     <div key={movie.id}>
       <img src={movie.medium_cover_image} alt={movie.title} />
-      <h2 onClick={goDetail}>{movie.title}</h2>
+      <h2>
+        <Link to={`/movieDetail/${movie.id}`}>link - {movie.title}</Link>
+      </h2>
+      <h2 onClick={goDetail}>navigte - {movie.title}</h2>
       <p>{movie.summary}</p>
       <ul>
         {movie.genres.map((genre) => (
