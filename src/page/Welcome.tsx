@@ -23,7 +23,7 @@ const Movies = () => {
     const { data: upcoming } = await upcomingList()
     setUpcoming(upcoming.results)
     const { data: popular } = await popularList()
-    setPopular(popular)
+    setPopular(popular.results)
     setLoading(false)
   }
   const goHome = (e: React.MouseEvent<HTMLButtonElement>) => {
