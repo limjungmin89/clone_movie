@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
+import Button from '../components/Button'
 
 // model
 import movie from '../model/type/movie'
@@ -22,7 +23,7 @@ const MovieDetail = () => {
     <div>
       <img src={movieDetail?.large_cover_image} alt={movieDetail?.title}></img>
       <h2>{movieDetail?.title}</h2>
-      <button onClick={goList}>goList</button>
+      <Button onClick={goList}>goList</Button>
     </div>
   )
 }

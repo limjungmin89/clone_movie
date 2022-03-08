@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import Button from '../components/Button'
 
 const Welcome = () => {
   const navigate = useNavigate()
@@ -9,7 +10,8 @@ const Welcome = () => {
   return (
     <div>
       <h1>hello. This is My React Page!!!!!!</h1>
-      <button onClick={goMovies}>Movies</button>
+      <Button onClick={goMovies}>Movies</Button>
+      <button>test</button>
     </div>
   )
 }

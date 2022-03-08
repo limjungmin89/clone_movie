@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-
 import Welcome from '../page/Welcome'
 import Movies from '../page/Movies'
 import MovieDetail from '../page/MovieDetail'
