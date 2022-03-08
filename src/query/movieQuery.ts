@@ -8,8 +8,16 @@ const api = axios.create({
   },
 })
 
-export const palyList = () => {
+export const nowPlayingList = () => {
   return api.get('movie/now_playing')
+}
+
+export const upcomingList = () => {
+  return api.get('movie/upcoming')
+}
+
+export const popularList = () => {
+  return api.get('movie/popular')
 }
 
 export const movieDetail = (id: number) => {

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Movie from './Movie'
 import movieInfo from '../model/type/movie'
-import Button from '../components/Button'
 
 const Movies = () => {
   const navigate = useNavigate()
@@ -22,7 +21,7 @@ const Movies = () => {
   return (
     <div>
       <h1>The Movies {movies.length}</h1>
-      <Button onClick={goHome}>goHome</Button>
+      <button onClick={goHome}>goHome</button>
       {loading ? (
         <h1>Loading...</h1>
       ) : (

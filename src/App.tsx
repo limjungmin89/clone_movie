@@ -6,7 +6,7 @@ import theme from './styles/theme'
 const Container = styled.div`
   background-color: ${(props) => props.theme.mainBackground};
   color: ${(props) => props.theme.primaryText};
-  height: 100vh;
+  height: 200vh;
 `
 
 const App = () => {
