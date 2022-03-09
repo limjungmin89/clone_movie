@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { nowPlayingList, upcomingList, popularList } from '../../query/movieQuery'
+import { useEffect, useState } from 'react'
+import { nowPlayingList, upcomingList, popularList } from 'query/movieQuery'
 import HomePresenter from './HomePresenter'
+import Loader from 'components/Loader'
 
 const Movies = () => {
   const [loading, setLoading] = useState(true)
@@ -26,7 +27,11 @@ const Movies = () => {
   useEffect(() => {
     getMovies()
   }, [])
-  return <HomePresenter nowPlaying={nowPlaying} upcoming={upcoming} popular={popular} error={error} loading={loading} />
+  return loading === true ? (
+    <Loader />
+  ) : (
+    <HomePresenter nowPlaying={nowPlaying} upcoming={upcoming} popular={popular} error={error} loading={loading} />
+  )
 }
 
 export default Movies

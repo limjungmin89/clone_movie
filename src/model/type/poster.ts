@@ -4,7 +4,7 @@ type propType = {
   title: string
   rating: number
   year: string
-  isMovie: Boolean
+  isMovie?: Boolean
 }
 
 export default propType

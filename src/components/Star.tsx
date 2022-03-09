@@ -7,7 +7,11 @@ const Container = styled.span`
   color: goldenrod;
 `
 
-const Star = ({ rating }: any) => {
+type propType = {
+  rating: number
+}
+
+const Star = ({ rating }: propType) => {
   let ratingStar = ''
   let star = '★'
   for (let i = 1; i <= rating; i++) {

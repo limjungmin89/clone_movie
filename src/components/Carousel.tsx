@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
+import data from 'model/type/data'
 
 const Img = styled.img`
   background-image: url(${(props: any) => props.bgUrl});
@@ -26,7 +27,7 @@ const CarouselDiv = styled.div`
 `
 
 type propTypes = {
-  nowPlaying: Array<object>
+  nowPlaying: Array<data>
   isMovie: boolean
 }
 
@@ -44,11 +45,10 @@ const Carousel = ({ nowPlaying, isMovie }: propTypes) => {
   }
   return (
     <Slider {...settings}>
-      {nowPlaying.map((movie: any, i: any) => (
-        <Link to={isMovie ? `/movie/${movie.id}` : `/show/${movie.id}`}>
-          {' '}
+      {nowPlaying.map((data: data, i: number) => (
+        <Link to={isMovie ? `/movie/${data.id}` : `/show/${data.id}`}>
           <CarouselDiv key={i}>
-            <Img key={i} src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} />
+            <Img key={i} src={`https://image.tmdb.org/t/p/w300${data.poster_path}`} />
           </CarouselDiv>
         </Link>
       ))}

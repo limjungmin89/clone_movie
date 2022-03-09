@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Header from '../components/Header'
-import Home from '../page/Home/HomeContainer'
+import Header from 'components/Header'
+import Home from 'page/Home/HomeContainer'
+import TV from 'page/TV/TvContainer'
 
 const Router = () => {
   return (
@@ -8,6 +9,7 @@ const Router = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/tv" element={<TV />} />
       </Routes>
     </BrowserRouter>
   )

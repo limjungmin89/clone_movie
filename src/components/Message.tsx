@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import message from '../model/type/message'
+import message from 'model/type/message'
 
 const Container = styled.div`
   width: 100vw;

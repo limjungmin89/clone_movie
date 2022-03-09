@@ -7,12 +7,12 @@ import poster from '../model/type/poster'
 const Container = styled.div`
   font-size: 15px;
 `
-type test = {
+type propType = {
   bgUrl: string
 }
 
 const Image = styled.div`
-  background-image: url(${(props: test) => props.bgUrl});
+  background-image: url(${(props: propType) => props.bgUrl});
   height: 180px;
   background-size: cover;
   border-radius: 4px;

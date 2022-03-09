@@ -1,9 +1,11 @@
-import movie from './movie'
+import data from './data'
 
 type props = {
-  nowPlaying: Array<movie>
-  upcoming: Array<movie>
-  popular: Array<movie>
+  nowPlaying?: Array<data>
+  upcoming?: Array<data>
+  popular?: Array<data>
+  topRated?: Array<data>
+  airingToday?: Array<data>
   error: string
   loading: boolean
 }
