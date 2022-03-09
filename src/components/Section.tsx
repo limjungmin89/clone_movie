@@ -19,8 +19,12 @@ const Grid = styled.div`
   grid-template-columns: repeat(auto-fill, 125px);
   grid-gap: 25px;
 `
+type prop = {
+  title: string
+  children: React.ReactNode
+}
 
-const Section = ({ title, children }: any) => (
+const Section = ({ title, children }: prop) => (
   <Container>
     <Title>{title}</Title>
     <Grid>{children}</Grid>

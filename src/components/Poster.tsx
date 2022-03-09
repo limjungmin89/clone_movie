@@ -6,9 +6,12 @@ import Star from './Star'
 const Container = styled.div`
   font-size: 15px;
 `
+type test = {
+  bgUrl: string
+}
 
 const Image = styled.div`
-  background-image: url(${(props: any) => props.bgUrl});
+  background-image: url(${(props: test) => props.bgUrl});
   height: 180px;
   background-size: cover;
   border-radius: 4px;
@@ -51,7 +54,7 @@ const Year = styled.span`
 `
 
 type propType = {
-  id: string
+  id: number
   imageUrl: string
   title: string
   rating: number
@@ -63,7 +66,9 @@ const Poster = ({ id, imageUrl, title, rating, year, isMovie = false }: propType
   <Link to={isMovie ? `/movie/${id}` : `/show/${id}`}>
     <Container>
       <ImageContainer>
-        <Image background-image={`https://image.tmdb.org/t/p/w300${imageUrl}`} />
+        <Image
+          bgUrl={imageUrl ? `https://image.tmdb.org/t/p/w300${imageUrl}` : require('../assets/noPosterSmall.png')}
+        />
         <Rating>
           <span role="img" aria-label="rating">
             <Star rating={rating / 2} />

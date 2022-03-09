@@ -1,11 +1,10 @@
 type movieInfo = {
-  id: string
-  name: string
+  id: number
   title: string
-  summary: string
-  genres: Array<string>
-  medium_cover_image: string
-  large_cover_image: string
+  poster_path: string
+  original_title: string
+  vote_average: number
+  release_date: string
 }
 
 export default movieInfo

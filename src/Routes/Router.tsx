@@ -1,15 +1,13 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Welcome from '../page/Welcome'
-import Movies from '../page/Movies'
-import MovieDetail from '../page/MovieDetail'
+import Header from '../components/Header'
+import Home from '../page/Home/HomeContainer'
 
 const Router = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Header />
       <Routes>
-        <Route path="/" element={<Welcome />} />
-        <Route path="/movies" element={<Movies />} />
-        <Route path="/movieDetail/:id" element={<MovieDetail />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
   )
