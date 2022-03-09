@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Star from './Star'
+import poster from '../model/type/poster'
 
 const Container = styled.div`
   font-size: 15px;
@@ -52,17 +53,7 @@ const Year = styled.span`
   font-size: 10px;
   color: rgba(255, 255, 255, 0.5);
 `
-
-type propType = {
-  id: number
-  imageUrl: string
-  title: string
-  rating: number
-  year: string
-  isMovie: Boolean
-}
-
-const Poster = ({ id, imageUrl, title, rating, year, isMovie = false }: propType) => (
+const Poster = ({ id, imageUrl, title, rating, year, isMovie = false }: poster) => (
   <Link to={isMovie ? `/movie/${id}` : `/show/${id}`}>
     <Container>
       <ImageContainer>
@@ -72,7 +63,7 @@ const Poster = ({ id, imageUrl, title, rating, year, isMovie = false }: propType
         <Rating>
           <span role="img" aria-label="rating">
             <Star rating={rating / 2} />
-          </span>{' '}
+          </span>
           {rating}/10
         </Rating>
       </ImageContainer>
