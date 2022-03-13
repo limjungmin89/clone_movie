@@ -62,8 +62,8 @@ type props = {
   error: string
   handleSubmit: React.FormEventHandler<HTMLFormElement>
   updateTerm: React.ChangeEventHandler<HTMLInputElement>
-  movieTrend: any
-  tvTrend: any
+  movieTrend: Array<dataInfo>
+  tvTrend: Array<dataInfo>
 }
 
 const SearchPresenter = ({
@@ -100,7 +100,7 @@ const SearchPresenter = ({
       <Title>This Week's Top 5 TV Shows</Title>
       {tvTrend && tvTrend.length > 0 && (
         <Recommend>
-          {tvTrend.map((tv: any) => (
+          {tvTrend.map((tv: dataInfo) => (
             <Link to={`/show/${tv.id}`}>
               <Span bgColor="#4287f5">{tv.original_name}</Span>
             </Link>

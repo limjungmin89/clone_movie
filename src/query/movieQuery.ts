@@ -20,7 +20,7 @@ export const popularList = () => {
   return api.get('movie/popular')
 }
 
-export const movieDetail = (id: any) => {
+export const movieDetail = (id: number) => {
   return api.get(`movie/${id}`, {
     params: {
       append_to_response: 'videos',
