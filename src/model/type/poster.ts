@@ -3,7 +3,7 @@ type propType = {
   imageUrl: string
   title: string
   rating: number
-  year: string
+  year?: string
   isMovie?: Boolean
 }
 

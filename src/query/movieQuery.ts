@@ -27,3 +27,15 @@ export const movieDetail = (id: any) => {
     },
   })
 }
+
+export const getMovieTrend = () => {
+  return api.get('trending/movie/week')
+}
+
+export const searchMovie = (param: any) => {
+  return api.get('search/movie', {
+    params: {
+      query: encodeURIComponent(param),
+    },
+  })
+}

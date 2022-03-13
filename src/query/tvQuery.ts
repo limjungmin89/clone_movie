@@ -27,3 +27,15 @@ export const showDetail = (id: number) => {
     },
   })
 }
+
+export const getTvTrend = () => {
+  return api.get('trending/tv/week')
+}
+
+export const searchTv = (param: any) => {
+  return api.get('search/tv', {
+    params: {
+      query: encodeURIComponent(param),
+    },
+  })
+}
