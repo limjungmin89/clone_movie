@@ -4,6 +4,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async'
 import styled from 'styled-components'
 import company from 'model/type/company'
 import season from 'model/type/season'
+import genre from 'model/type/genre'
 
 type prop = {
   bgImage: string
@@ -141,7 +142,7 @@ const DetailPresenter = ({ result, loading, error }: props) => {
                 <Divider>•</Divider>
                 <Item>
                   {result?.genres &&
-                    result?.genres.map((genre: any, index: number) =>
+                    result?.genres.map((genre: genre, index: number) =>
                       index === result.genres.length - 1 ? genre.name : `${genre.name} / `,
                     )}
                 </Item>

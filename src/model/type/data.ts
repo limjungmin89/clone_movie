@@ -1,4 +1,6 @@
+import company from './company'
 import genre from './genre'
+import season from './season'
 
 type dataInfo = {
   id: number
@@ -11,13 +13,13 @@ type dataInfo = {
   first_air_date: string
   backdrop_path: string
   runtime: string
-  episode_run_time: any
+  episode_run_time: Array<string>
   imdb_id: string
   overview: string
   genres: Array<genre>
-  videos: { results: any }
-  production_companies: []
-  seasons: []
+  videos: any
+  production_companies: Array<company>
+  seasons: Array<season>
 }
 
 export default dataInfo
