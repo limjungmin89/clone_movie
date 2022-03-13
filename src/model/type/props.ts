@@ -8,6 +8,7 @@ type props = {
   airingToday?: Array<data>
   error: string
   loading: boolean
+  result?: data
 }
 
 export default props

@@ -19,3 +19,11 @@ export const popularList = () => {
 export const airingTodayList = () => {
   return api.get('tv/airing_today')
 }
+
+export const showDetail = (id: number) => {
+  return api.get(`tv/${id}`, {
+    params: {
+      append_to_response: 'videos',
+    },
+  })
+}

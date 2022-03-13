@@ -47,8 +47,8 @@ const Carousel = ({ nowPlaying, isMovie }: propTypes) => {
     <Slider {...settings}>
       {nowPlaying.map((data: data, i: number) => (
         <Link to={isMovie ? `/movie/${data.id}` : `/show/${data.id}`}>
-          <CarouselDiv key={i}>
-            <Img key={i} src={`https://image.tmdb.org/t/p/w300${data.poster_path}`} />
+          <CarouselDiv key={i} id={`div${i}`}>
+            <Img src={`https://image.tmdb.org/t/p/w300${data.poster_path}`} key={i} id={`img${i}`} />
           </CarouselDiv>
         </Link>
       ))}
