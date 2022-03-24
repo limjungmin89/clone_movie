@@ -10,7 +10,6 @@ const Container = styled.div`
 type propType = {
   bgUrl: string
 }
-
 const Image = styled.div`
   background-image: url(${(props: propType) => props.bgUrl});
   height: 180px;
@@ -19,7 +18,6 @@ const Image = styled.div`
   background-position: center center;
   transition: opacity 0.1s linear;
 `
-
 const Rating = styled.span`
   bottom: 5px;
   right: 5px;
@@ -27,7 +25,6 @@ const Rating = styled.span`
   opacity: 0;
   transition: opacity 0.1s linear;
 `
-
 const ImageContainer = styled.div`
   margin-bottom: 5px;
   position: relative;
@@ -40,7 +37,6 @@ const ImageContainer = styled.div`
     }
   }
 `
-
 const Title = styled.span`
   display: block;
   margin-bottom: 3px;
@@ -48,7 +44,6 @@ const Title = styled.span`
   text-overflow: ellipsis;
   white-space: nowrap;
 `
-
 const Year = styled.span`
   font-size: 10px;
   color: rgba(255, 255, 255, 0.5);
